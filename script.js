@@ -1,20 +1,21 @@
-function secondHighest(arr) {
+let n = Number(prompt());
 
-    let first = -Infinity;
-    let second = -Infinity;
+let first = -Infinity;
+let second = -Infinity;
 
-    for(let i = 0; i < arr.length; i++) {
+for(let i = 0; i < n; i++) {
 
-        if(arr[i] > first) {
+    let num = Number(prompt());
 
-            second = first;
-            first = arr[i];
+    if(num > first) {
 
-        } else if(arr[i] > second && arr[i] < first) {
+        second = first;
+        first = num;
 
-            second = arr[i];
-        }
+    } else if(num > second && num < first) {
+
+        second = num;
     }
-
-    return second;
 }
+
+alert(second);
